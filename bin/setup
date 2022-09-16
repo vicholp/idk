@@ -1,0 +1,14 @@
+#! /bin/bash
+
+# Run this command just after cloning the repo
+
+set -e
+
+cp .env.example .env
+cp public/.htaccess.example public/.htaccess
+
+composer install
+npm install
+npm run dev
+
+php execute Database migrateFresh

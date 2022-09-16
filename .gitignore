@@ -1,0 +1,7 @@
+/node_modules
+/vendor
+/vscode
+.env
+.php-cs-fixer.cache
+public/.htaccess
+error_log

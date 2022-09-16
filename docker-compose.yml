@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  php:
+    build: ./provision/shared
+    volumes:
+      - .:/var/www/html
+    network_mode: host
+
+  db:
+    image: percona:5.7-centos
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: database
+    volumes:
+      - db:/var/lib/mysql
+    network_mode: host
+
+volumes:
+  db:

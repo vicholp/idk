@@ -1,0 +1,6 @@
+.git/
+node_modules/
+
+public/error_log
+public/.htaccess
+.env
