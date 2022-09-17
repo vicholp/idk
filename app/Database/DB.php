@@ -51,7 +51,7 @@ class DB
         return (new DB())->execute($query, $params)->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    public static function insert(string $query, array $params = []): int
+    public static function insert(string $query, array $params = []): int|false
     {
         $pdo = new DB();
 
@@ -62,7 +62,7 @@ class DB
         if ($id) {
             return (int) $id;
         } else {
-            return 0;
+            return false;
         }
     }
 }
