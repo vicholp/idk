@@ -22,9 +22,4 @@ class Migration
         /* @phpstan-ignore-next-line */
         (new DB())->execute(file_get_contents(__DIR__.'/sql/up.sql'));
     }
-
-    public static function seed(): void
-    {
-        //
-    }
 }
