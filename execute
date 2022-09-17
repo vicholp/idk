@@ -1,18 +1,31 @@
 <?php
 
-if (count($argv) <= 1){
-    print("You should include a command \n");
+if (count($argv) < 2) {
+    echo "You should include a command \n";
     exit;
 }
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
-(new \NunoMaduro\Collision\Provider)->register();
+(new \NunoMaduro\Collision\Provider())->register();
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/');
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/');
 $dotenv->load();
 
-$class = 'App\\Commands\\' .  $argv[1] . 'Command';
-$function = $argv[2];
 
-(new $class)->$function();
+if (count($argv) == 2) {
+    if ($argv[1] == 'psysh') {
+        extract(\Psy\debug());
+        exit;
+    } else {
+        echo "Unknown command \n";
+        exit;
+    }
+} else if (count($argv) > 2) {
+    $class = 'App\\Commands\\'.$argv[1].'Command';
+    $function = $argv[2];
+
+    (new $class())->$function();
+}
+
