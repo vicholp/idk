@@ -2,8 +2,6 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use App\ExceptionHandler;
-
 use App\Routers\Router;
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
