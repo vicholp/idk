@@ -8,6 +8,9 @@ use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\RouteCollection;
 
+/**
+ * Performs the routing inside the route() method.
+ */
 class Router
 {
     private RouteCollection $routes;
@@ -19,16 +22,25 @@ class Router
         $this->register();
     }
 
+    /**
+     * Register routes classes.
+     */
     private function register(): void
     {
         $this->routes->addCollection((new WebRouter())->routes());
     }
 
+    /**
+     * Get the routes as a RouteCollection object.
+     */
     public function getRoutes(): RouteCollection
     {
         return $this->routes;
     }
 
+    /**
+     * Takes the global context and call the controller action.
+     */
     public function route(): Response
     {
         $request = Request::createFromGlobals();

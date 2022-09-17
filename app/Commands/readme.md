@@ -1,6 +1,6 @@
 # Commands
 
-Here you can register command that will be executed from the command line.
+Here you can register commands that can be executed from the command line.
 
 For example, the `RouteCommand.php` file defines a function `list()`. You 
 can execute this function with:
