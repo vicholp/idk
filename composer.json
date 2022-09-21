@@ -14,11 +14,6 @@
         "league/openapi-psr7-validator": "^0.18.0",
         "friendsofphp/php-cs-fixer": "^3.11"
     },
-    "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        }
-    },
     "autoload": {
         "psr-4": {
             "App\\": "app/"
