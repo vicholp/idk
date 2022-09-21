@@ -25,12 +25,12 @@ class BaseRouter
     }
 
     /**
-     * Add a new get route to the collection
+     * Add a new get route to the collection.
      *
-     * @param string $url Path of the route
-     * @param string $name Name of the route used by Sympony
+     * @param string $url        Path of the route
+     * @param string $name       Name of the route used by Sympony
      * @param string $controller Controller class name
-     * @param string $action Method name of the controller to be called
+     * @param string $action     Method name of the controller to be called
      */
     protected function get(string $url, string $name, string $controller, string $action): void
     {
@@ -45,12 +45,12 @@ class BaseRouter
     }
 
     /**
-     * Add a new post route to the collection
+     * Add a new post route to the collection.
      *
-     * @param string $url Path of the route
-     * @param string $name Name of the route used by Sympony
+     * @param string $url        Path of the route
+     * @param string $name       Name of the route used by Sympony
      * @param string $controller Controller class name
-     * @param string $action Method name of the controller to be called
+     * @param string $action     Method name of the controller to be called
      */
     protected function post(string $url, string $name, string $controller, string $action): void
     {

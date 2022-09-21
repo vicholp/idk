@@ -15,7 +15,7 @@ class Migration
     }
 
     /**
-     * Execute queries to drop all tables
+     * Execute queries to drop all tables.
      */
     public static function down(): void
     {
@@ -24,7 +24,7 @@ class Migration
     }
 
     /**
-     * Execute queries to create all tables
+     * Execute queries to create all tables.
      */
     public static function up(): void
     {

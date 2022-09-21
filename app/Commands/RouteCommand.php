@@ -11,7 +11,7 @@ class RouteCommand
         $routes = (new Router())->getRoutes();
 
         foreach ($routes as $route) {
-            dump($route->getPath() . ' -> ' . $route->getDefaults()['_controller'] . '::' .$route->getDefaults()['_action']);
+            dump($route->getPath().' -> '.$route->getDefaults()['_controller'].'::'.$route->getDefaults()['_action']);
         }
     }
 }
